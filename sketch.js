@@ -21,7 +21,7 @@ wall.shapeColor=color(80,80,80);
 function draw() {
   background(255,255,255);  
   //isTouching();
-  ifif(hasCollided(bullet,wall)){
+  if(hasCollided(bullet,wall)){
    console.log("hi");
     //object1.shapeColor="red"
 //object2.shapeColor="red"
