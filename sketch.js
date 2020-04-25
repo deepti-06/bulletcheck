@@ -21,17 +21,12 @@ wall.shapeColor=color(80,80,80);
 function draw() {
   background(255,255,255);  
   //isTouching();
-  if(isTouching(bullet,wall)){
+  ifif(hasCollided(bullet,wall)){
    console.log("hi");
     //object1.shapeColor="red"
 //object2.shapeColor="red"
 bullet.velocityX=0;
-bullet.velocityY=0;
 damage=(0.5*weight*speed*speed)/(thick*thick*thick)
-  }
-  else{
-   bullet.shapeColor="blue"
-wall.shapeColor="blue"
   }
 if(damage<10){
   console.log("hello")
@@ -43,4 +38,13 @@ if(damage>10){
 }
   drawSprites();
 }
+function hasCollided(obj1,obj2){
+  bulletRightEdge=obj1.x+obj1.width;
+  wallLeftEdge=obj2.x;
+  if(bulletRightEdge>=wallLeftEdge){
+return true;
+  }
+    
+      return false;
+  }
 
